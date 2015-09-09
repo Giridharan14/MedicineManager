@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.giridharan.medicine_manager"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+ <uses-permission android:name="android.permission.SEND_SMS" />
+ <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+             
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".add_tablet"></activity>
+            <activity android:name=".view_tablet_list"></activity>
+        	<activity android:name=".uodate"></activity>
+        	<activity android:name=".c_add"></activity>
+        	 <service android:name=".MyAlarmService"
+                 android:enabled="true" />
+         
+        <receiver android:name=".MyReceiver"/>
+    </application>
+
+</manifest>
